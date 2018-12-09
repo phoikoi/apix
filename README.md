@@ -30,8 +30,8 @@ each item is listed within an INI section, and this section is the first
 half of the positional argument to `config`:
 
 ```ini
-[django]
-secret_key = <secret key goes here>
+[section]
+item = <config data goes here>
 ```
 
 If the `site.ini` file is not present when a django admin command is run,
