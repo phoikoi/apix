@@ -1,0 +1,11 @@
+{
+  "name": "apixfe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "node-sass": "^4.10.0",
+    "uuid": "^3.3.2"
+  }
+}

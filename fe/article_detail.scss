@@ -1,0 +1,51 @@
+div.byline {
+    margin-top: 0.5rem;
+    font-weight:600;
+}
+
+div.dateline {
+    margin-bottom: 0.5rem;
+    font-size: 80%;
+    color: $gray-500;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.topgrid {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-areas: "maincontent"
+        "leftbar";
+    grid-template-columns: 1fr;
+    max-width: 57rem;
+}
+
+.leftbar {
+    grid-area: leftbar;
+    margin-top: 1rem;
+    font-size: 80%;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.maincontent {
+    grid-area: maincontent;
+    max-width: 40rem;
+}
+
+@include media-breakpoint-up(sm) {
+    .topgrid {
+        grid-template-areas: "leftbar maincontent";
+        grid-template-columns: minmax(125px,175px) 1fr;
+    }
+    
+    .leftbar {
+        margin-top: 0;
+    }
+}

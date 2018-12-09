@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+channels-redis = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
+redis = "*"
+pillow = "*"
+pytz = "*"
+arrow = "*"
+maya = "*"
+django-allauth = "*"
+requests = "*"
+djangorestframework = "*"
+djangorestframework-jwt = "*"
+markdown = "*"
+pygments = "*"
+django-pagedown = "*"
+django-redis-cache = "*"
+
+[requires]
+python_version = "3.7"

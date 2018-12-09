@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static article_tags %}
+{% block leftbar %}
+<h3>Recent articles</h3>
+    {% show_article_list %}
+{% endblock %}
+{% block content %}
+        <h1>{{ object.title }}</h1>
+        <div class="byline">By {{ object.author_names }}</div>
+        <div class="dateline">Created {{ object.created_at|date:"D, wS N H:i" }}
+            {% if object.created_at != object.modified_at %}<br>
+            Last modified {{ object.modified_at|date:"D, wS N H:i" }}</div>{% endif %}
+        <div>
+                {{ object.rendered|safe }}
+        </div>
+        <hr>
+{% endblock content %}
+{% block extra_js %}
+<script src="{% static "js/mermaid.min.js" %}"></script>
+<script>
+    mermaid.initialize({startOnLoad:true});
+</script>
+{% endblock extra_js %}

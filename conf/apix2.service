@@ -1,0 +1,24 @@
+[Unit]
+Description=apix %I
+After=syslog.target
+After=network.target
+After=postgresql.service
+After=nginx.service
+
+Requires=apix.socket
+
+[Service]
+User=web
+Group=web
+Type=simple
+RuntimeDirectory=apix
+
+PIDFile=/run/daphne.pid
+
+WorkingDirectory=/home/web/dev/apix
+
+ExecStart=/home/web/.pyenv/versions/apix/bin/daphne --fd %i  \
+    apix.asgi:application
+
+[Install]
+WantedBy=multi-user.target

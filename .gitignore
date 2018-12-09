@@ -1,0 +1,9 @@
+**/__pycache__
+**/*.pyc
+**/*.pyd
+**/*~
+/static
+/media
+**/node_modules
+/site.ini
+

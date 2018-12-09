@@ -1,0 +1,278 @@
+$font-family-sans-serif: "IBM Plex Sans", system-ui, sans-serif;
+$font-family-monospace: "IBM Plex Mono", monospace;
+$headings-font-family: "IBM Plex Serif", serif;
+
+// gradient map definition for modified bootstrap color scheme
+// #030303 @ 0
+// #3b3464 @ 7
+// #a06a57 @ 35
+// #ffe8b2 @ 76
+// #ffffff @ 100
+
+// modified bootstrap color scheme (warmer, less saturated)
+// 
+$white:    #fff;
+$gray-100: #fafafa;
+$gray-200: #f0f0ef;
+$gray-300: #e8e9e5;
+$gray-400: #ddded8;
+$gray-500: #c1c0ba;
+$gray-600: #7f7a7e;
+$gray-700: #5a535c;
+$gray-800: #423f4a;
+$gray-900: #2b2e39;
+$black:    #000;
+
+$blue:    #6a81e1;
+$indigo:  #7b2dd1;
+$purple:  #7e4bad;
+$pink:    #e25f8c;
+$red:     #d65354;
+$orange:  #fc943f;
+$yellow:  #ffcf4e;
+$green:   #67ad5a;
+$teal:    #74d09c;
+$cyan:    #6aa8b0;
+
+$yiq-text-dark: $gray-900;
+$yiq-text-light: $gray-100;
+
+$body-bg: $gray-100;
+$body-color: $gray-700;
+
+$paragraph-margin-bottom: 0.5rem;
+$line-height-lg: 1.2;
+$line-height-sm: 1.1;
+
+$component-active-color: $gray-100;
+
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 1.5;
+$h2-font-size: $font-size-base * 1.33;
+$h3-font-size: $font-size-base * 1.2;
+$h4-font-size: $font-size-base * 1.1;
+$h5-font-size: $font-size-base;
+$h6-font-size: $font-size-base;
+
+$headings-margin-bottom: 0.5rem;
+$headings-font-weight: 700;
+$headings-line-height: 1.2;
+
+$table-accent-bg: rgba($gray-900, .05);
+$table-hover-bg: rgba($gray-900, .075);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: normal;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+h1, .h1 {
+    font-size: $h1-font-size;
+    font-weight: 600;
+    color: $primary;
+}
+
+h2, .h2 {
+    font-size: $h2-font-size;
+    font-weight: 500;
+    color: $primary;
+}
+
+h3, .h3 {
+    font-size: $h3-font-size;
+    font-weight: 600;
+    font-family: $font-family-sans-serif;
+}
+
+h4, .h4 {
+    font-size: $h4-font-size;
+    font-weight: 500;
+    font-family: $font-family-sans-serif;
+}
+
+h5, .h5 {
+    font-size: $h5-font-size;
+    font-weight: 500;
+    font-family: $font-family-sans-serif;
+}
+
+h6, .h6 {
+    font-size: $h6-font-size;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.btn {
+    font-family: $font-family-sans-serif;
+}
+.left-image {
+    width: 50vw; height: auto;
+    min-width: 200px; max-width: 50%;
+    float:left;
+    margin-right:1rem; margin-bottom: 0.5rem;
+    border: 1px solid $gray-900;
+}
+
+.right-image {
+    width: 50vw; height: auto;
+    min-width: 200px; max-width: 50%;
+    float:right;
+    margin-left:1rem; margin-bottom: 0.5rem;
+    border: 1px solid $gray-900;
+}
+
+.featured-image {
+    margin: 1rem auto;
+    display:block;
+    border: 1px solid $gray-900;
+}
+
+.featured-image-wrapper {
+}
+
+.headshot-image { border: 1px solid #444; float:left; margin-right:0.5rem; margin-bottom: 0.5rem; border: 1px solid $gray-900; }
+
+.page-title {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.page-date {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 80%;
+    font-style: italic;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.page-summary {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+.section-heading {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-size: 120%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.video-embed {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size:80%;
+    margin-top:2rem;
+    margin-bottom:2rem;
+}
+
+.rich-text img {
+    max-width: 100%;
+    height: auto;
+}
+
+.responsive-object {
+    position: relative;
+}
+
+.responsive-object iframe,
+.responsive-object object,
+.responsive-object embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.topadjust { margin-top: 5rem; }
+.table-sm { font-size: 80%; }
+.content-wrapper { max-width: 45rem; padding: 0 0; }
+
+@include media-breakpoint-down(sm) {
+    .content-wrapper {
+        font-size: 90%;
+    }
+}
+
+$bigscreen-image-adjust: 8rem;
+
+@include media-breakpoint-up(lg) {
+    .content-wrapper {
+        max-width: 45rem;
+    }
+    .left-image {
+        margin-left: $bigscreen-image-adjust * -1;
+        max-width: 66%;
+    }
+
+    .right-image {
+        margin-right:$bigscreen-image-adjust * -1;
+        max-width: 66%;
+    }
+
+    .featured-image-wrapper {
+        position: relative;
+        margin-left: $bigscreen-image-adjust * -1;
+        margin-right:$bigscreen-image-adjust * -1;
+    }
+}
+
+.darkbody { background-color: $gray-100; }
+body { min-width: 300px; }
+ul.breadcrumb {
+    background-color: $gray-100;
+    margin: 0;
+    padding: 0;
+    li {
+        font-weight: 500;
+    }
+}
+
+nav.breadcrumb-nav {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+@import "pygments_default";
+
+div.codehilite {
+  margin:0.5rem;
+  padding:0.5rem;
+  background-color:#ffe;
+  border: 1px solid #ccd;
+}
+
+@import "article_detail";
+
+svg#cogs-svg {
+    height:32px;
+    width:32px;
+    path {
+        fill: $primary;
+
+    }
+}
+
+pre, code {
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    margin-bottom: 0;
+    font-size: 80%;
+}
+
+div.mermaid {
+    font-size: 80%;
+}

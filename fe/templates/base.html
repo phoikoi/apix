@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        {# Global stylesheets #}
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,700,700i|IBM+Plex+Sans:300,300i,400,400i,500,600,700|IBM+Plex+Serif:300,300i,400,400i,500,600,700&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+        {% block extrahead %}
+        {% endblock %}
+    </head>
+
+    <body class="darkbody {% block body_class %}{% endblock %}">
+        {% block navbar %}
+<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="{% url "article_list" %}">
+            {% include "cogs-svg.html" %}
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" area-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        {# Put navbar code here #}
+    </div>
+</div>
+        {% endblock navbar %}
+        <div class="container topadjust">
+            <div class="topgrid">
+                <div class="leftbar">
+                    {% block leftbar %}
+                    {% endblock leftbar %}
+                </div>
+                <div class="maincontent">
+                    <div class="content-wrapper">
+                    {% block content %}
+                    {% endblock content %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {# Global javascript #}
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/ocbs.js' %}"></script>
+
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
+</html>
