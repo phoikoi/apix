@@ -69,7 +69,7 @@ WSGI_APPLICATION = 'apix.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': parse('postgres://apix:apix@127.0.0.1/apix')
+    'default': parse(config('django.db_url'))
 }
 
 AUTH_USER_MODEL = 'apixauth.ApixUser'
