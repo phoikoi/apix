@@ -5,7 +5,7 @@
         <h4>{{ article.created_at|date:"Y" }}</h4>
     {% endifchanged %}
         
-    {{ article.created_at|date:"D, wS N H:i"}}<br>
+    {{ article.created_at|date:"D, jS N H:i"}}<br>
     <strong>
         <a href="{% url "article_detail" article.slug %}">
             {{ article.title }}

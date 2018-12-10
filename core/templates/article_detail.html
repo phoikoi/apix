@@ -7,9 +7,9 @@
 {% block content %}
         <h1>{{ object.title }}</h1>
         <div class="byline">By {{ object.author_names }}</div>
-        <div class="dateline">Created {{ object.created_at|date:"D, wS N H:i" }}
+        <div class="dateline">Created {{ object.created_at|date:"D, jS N H:i" }}
             {% if object.created_at != object.modified_at %}<br>
-            Last modified {{ object.modified_at|date:"D, wS N H:i" }}</div>{% endif %}
+            Last modified {{ object.modified_at|date:"D, jS N H:i" }}</div>{% endif %}
         <div>
                 {{ object.rendered|safe }}
         </div>
